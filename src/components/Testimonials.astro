@@ -1,0 +1,34 @@
+---
+// Fake testimonials based on the vibe
+const reviews = [
+  { text: "The best chai I've ever had! Cozy atmosphere and friendly staff. Highly recommend their karak tea.", author: "Ameer H.", rating: 5 },
+  { text: "Their cookies are heavenly. The gooey caramel one is a must-try. I come here every week with friends.", author: "Layla S.", rating: 5 },
+  { text: "Beautiful place, great for studying or catching up. The date cake with cardamom is a masterpiece.", author: "Omar K.", rating: 4.5 },
+];
+---
+
+<section class="py-24 bg-brand-dark-cream/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="text-brand-accent font-medium tracking-widest uppercase text-sm">Testimonials</span>
+      <h2 class="text-4xl md:text-5xl font-display font-bold mt-2">What Our Guests Say</h2>
+      <div class="flex items-center justify-center gap-2 mt-3">
+        <span class="text-2xl">⭐</span>
+        <span class="text-2xl font-bold">4.5</span>
+        <span class="text-brand-dark/50 text-sm">· Google Reviews</span>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {reviews.map((review, i) => (
+        <div class={`reveal reveal-delay-${i+1} bg-white rounded-2xl p-8 shadow-lg border border-brand-warm/10 relative`}>
+          <div class="flex items-center gap-1 mb-4">
+            {Array.from({ length: Math.floor(review.rating) }).map(() => <span class="text-yellow-500">★</span>)}
+            {review.rating % 1 > 0 && <span class="text-yellow-500">½</span>}
+          </div>
+          <p class="text-brand-dark/80 leading-relaxed italic mb-6">“{review.text}”</p>
+          <p class="font-semibold text-brand-dark">— {review.author}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

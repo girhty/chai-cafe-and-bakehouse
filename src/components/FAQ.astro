@@ -1,0 +1,33 @@
+---
+const faqs = [
+  { q: "What are your opening hours?", a: "We are open daily from 7:30 AM until midnight (12:00 AM). Whether you're an early bird or a night owl, CHAI has a cozy spot for you." },
+  { q: "Do you offer delivery?", a: "Yes! We partner with Tooters and Talabat for delivery. You can also call us directly at 0776 925 5592 for takeaway or pick-up orders." },
+  { q: "Where are you located?", a: "We're in Basra, Basra Governorate, حي عمان - قرب محمصة سليمان. You can find us easily on Google Maps." },
+  { q: "Do you have vegetarian or vegan options?", a: "Absolutely. Many of our baked goods and drinks can be made vegetarian or vegan. Just ask our friendly staff." },
+  { q: "Can I reserve a table or host an event?", a: "We accept small group reservations. For private events, please contact us via phone or Instagram DM." }
+];
+---
+
+<section class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="text-brand-accent font-medium tracking-widest uppercase text-sm">FAQ</span>
+      <h2 class="text-4xl md:text-5xl font-display font-bold mt-2">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-4">
+      {faqs.map((faq, i) => (
+        <div class={`reveal reveal-delay-${i+1} border border-brand-warm/20 rounded-2xl overflow-hidden`}>
+          <details class="group">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-medium text-lg bg-brand-cream/30 hover:bg-brand-cream/50 transition-colors">
+              <span>{faq.q}</span>
+              <svg class="w-5 h-5 transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-2 text-brand-dark/70 leading-relaxed">
+              {faq.a}
+            </div>
+          </details>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

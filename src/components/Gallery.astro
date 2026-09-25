@@ -1,0 +1,48 @@
+---
+// Using Instagram posts array, limit to 8
+const igPosts = [
+  {
+    caption: "Behind every cup of coffee, there's an artist. Enjoy the coffee at CHAI 🤍",
+    image: "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/818714040_17909885334493821_4834725978523488867_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=7vFtLNaXugcQ7kNvwEpX4AF&_nc_oc=AdqPUQWlP2NFKI95mkiZC29jlMzKWKxT5sUv1GYl_jfbHx5ts1q5VLVYxvl0CN0NGKo&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_nc_ss=72a8c&oh=00_AQKZS5Rg8iQG_KMG3Z8AyAGww93b1WRcmvc58k72_DvDPg&oe=6ABCE0C2"
+  },
+  { caption: "Enjoy the coffee bean dessert🤌 Available now at CHAI", image: "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/821552960_17909630832493821_4609784649427783652_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=TrhlscuTvEMQ7kNvwEbFXuj&_nc_oc=AdqOddBf8s9puMMpB6UUyOUAE3GT8nBXoeMD9wkH4XCO6av1tgqFJ52DWqW9LpIfF2I&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_nc_ss=72a8c&oh=00_AQJbxMKhU8xfnAT3pZyjBdDMbkHC5_52xcFcZkUgpf5ytw&oe=6ABCC5C1" },
+  { caption: "Cozy CHAI Moments (^_^)", image: "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/806514566_17908089465493821_447252721869699954_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=104&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=d_t73coR-bEQ7kNvwGbV3zA&_nc_oc=AdrWEjHhqdPEC0QJ2MaUkG1aFXLdi35yQFHQ5YYp3yEJwUOdI7vblDyuOQeHEFxp2AY&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_nc_ss=72a8c&oh=00_AQKC280GmTSFSx51dUoxZGT9Nudk4iQJVE6wJHHTrU4AOQ&oe=6ABCC0BD" },
+  { caption: "For a soft gooey cookie: 15 seconds in the microwave", image: "https://scontent-ams2-1.cdninstagram.com/v/t51.71878-15/806299193_1785061225979743_2483006360346837113_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=PGwHdmCEaUcQ7kNvwGldVcr&_nc_oc=AdoXTFjEkEjHZ1f6AEDI4Pnj9G-_9l_8tQrlR8emnfmLP7aCk_2pMAGvpB3hdSUhfJ4&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_nc_ss=72a8c&oh=00_AQKRIilpd7MefDymCWSqbiuPemrelucoR5bQt5ffNr0buw&oe=6ABCC6FA" },
+  { caption: "چاي بحقبة الثمانينات ✨️ #ترند_الثمانينات", image: "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/800934773_17907551844493821_2379741198510795548_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=109&ccb=7-5&_rcr_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=8ddaCiF6lQwQ7kNvwHGEWTq&_nc_oc=AdoFaB_EBZpt4SdURXAW7E6XMKmSJxF41AmiPcHNGyNoevfQ8JRXy_hDpAHbTsVx7Rk&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_nc_ss=72a8c&oh=00_AQLGN6EMdV7DF3gKmtUW_d_EW-nex4kNXBwTjxISUbMhSw&oe=6ABCC496" },
+ { caption: "Crispy honey butter toast", image: "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/783727454_17905567857493821_3420884156837318211_n.jpg?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=2gK_-vLje-MQ7kNvwFNtR2I&_nc_oc=AdpKM-bMKAa1gyJmBUrEzANHY6fqevnq8WdoXnYob7Mp5Q7jwnIKX-y2oDlFNH93ekc&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_nc_ss=72a8c&oh=00_AQJ-SFh3_LDeHK8aXeLaQ4ELGpp3rhAf3PnNQ5KAJTDCLA&oe=6ABCD232" },
+ { caption: "بيري كركديه: صحي، منعش وكلش طيب", image: "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/781425554_17904870372493821_4995401963722892143_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_rc_ohc=O7_8i7Q1AR4Q7kNvwFI0Lyx&_rc_oc=AdpC_ebrjR5U5Y2HStkDg5I_8frTfhIioD3R8lbVK3jlfyzrydAGZL_PYk7dUiovvpM&_rc_zt=23&_rc_ht=scontent-ams2-1.cdninstagram.com&_rc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_rc_ss=72a8c&oh=00_AQJXKsxtbc-YXMcGYoDra7N3IAo7jaO8P39antSSECQpww&oe=6ABCC942" },
+ { caption: "Summer Cherry Drinks 🍒", image: "https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/762864638_17902240098493821_2752189939955044032_n.heic?stp=dst-jpg_e35_s640x640_tt6&_nc_cat=106&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=gD6xtcJp-DwQ7kNvwHao_-U&_nc_oc=Adr3yclzN1BFFGxCxCtPFNTcQZfn_QbwuWDf7hysHdzNjjAxVLcSzjYzPRWxy-UFxag&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=TPlPnQvIUkHT_E9IYpo8eQ&_nc_ss=72a8c&oh=00_AQKLajV-CX0NfqxwlHuNDT2MPawpKIfNvr6sSGwGpjRGBw&oe=6ABCEE07" }
+];
+---
+
+<section id="gallery" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 reveal">
+      <div>
+        <span class="text-brand-accent font-medium tracking-widest uppercase text-sm">Instagram Feed</span>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mt-2">From Our Community</h2>
+        <p class="mt-2 text-brand-dark/70">Follow us <a href="https://www.instagram.com/chai.basra/" target="_blank" class="underline font-semibold">@chai.basra</a> · 10.7k followers</p>
+      </div>
+      <a href="https://www.instagram.com/chai.basra/" target="_blank" class="mt-4 md:mt-0 inline-flex items-center gap-2 text-sm font-medium text-brand-dark/70 hover:text-brand-accent transition">
+        View all posts
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+      {igPosts.map((post, i) => (
+        <div class={`reveal reveal-delay-${( i % 4) + 1} group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 bg-white`}>
+          <div class="aspect-square overflow-hidden">
+            <img src={post.image} alt={post.caption.slice(0, 50)} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+            <p class="text-white text-xs line-clamp-3 leading-relaxed">{post.caption}</p>
+            <div class="flex items-center gap-2 mt-2 text-white/80 text-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              <span>{post.likes || '0'} likes</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

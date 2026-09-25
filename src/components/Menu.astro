@@ -1,0 +1,27 @@
+---
+const menuItems = [
+  { name: "Artisan Coffee", desc: "Single origin espresso, cappuccino, latte", icon: "☕" },
+  { name: "Chai Specials", desc: "Taditional masala chai, saffron chai, karak", icon: "🍵" },
+  { name: "Bakery & Desserts", desc: "Coie cookie, date cake, chesecake, croissants", icon: "🥐" },
+  { name: "Signature Drinks", desc: "Crispy honey butter toast, berry karkade, summer cherry lemonade", icon: "🍹" }
+];
+---
+
+<section id="menu" class="py-24 bg-brand-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="text-brand-accent font-medium tracking-widest uppercase text-sm">Our Specialties</span>
+      <h2 class="text-4xl md:text-5xl font-display font-bold mt-2 mb-4">Handcrafted with Love</h2>
+      <p class="max-w-2xl mx-auto text-brand-dark/70">From our signature chai to freshly baked goods, every item is made with passion.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {menuItems.map((item, i) => (
+        <div class={`reveal reveal-delay-${i+1} bg-white/60 backdrop-blur-md rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all border border-white/40 hover:-translate-y-1`}>
+          <div class="text-5xl mb-4">{item.icon}</div>
+          <h3 class="text-2xl font-display font-semibold mb-2">{item.name}</h3>
+          <p class="text-sm text-brand-dark/60">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
